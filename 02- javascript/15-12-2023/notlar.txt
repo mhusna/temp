@@ -1,0 +1,4 @@
+Arrow function, this nesnesini taşımaz. Yani this.name diyerek erişemeyiz.
+
+Metotlarda genelde normal function taşıyoruz, this taşıdığı için.
+Dışarıda bir yerde function yazıcaksak da arrow function gibi yazarız.

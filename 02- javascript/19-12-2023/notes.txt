@@ -1,0 +1,6 @@
+>> Fetch'de iki kere response alınır, birincisi request bilgileri için diğeri data için.
+
+>> nodejs indiriyosun
+>> sonra cmd'ye 
+    npm install -g json-server
+yazıyosun.

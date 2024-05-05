@@ -1,0 +1,45 @@
+=> React real dom'un aynısından sanal dom üretir.
+=> Dom'da değişiklik olacaksa bu değişiklik önce sanal dom'a yansır, gerçek dom ve sanal dom karşılaştırılır.
+=> Eğer değişiklik varsa sadece değişiklik uygulanır.
+
+=> re-Render işlemi genelde component içerisinde yapılır.
+
+## Counter
+=> Bu component'inde sayı saydırma yapıcaz ve içerisindeki numara her değiştiğinde component re-render yapılması gerek.
+
+>> import React, { useState } from "react"; burada useState default olmayan bir export dolayısı ile bu şekilde import etmeliyiz.
+
+    import React, { useState as istediginIsmiVer } from "react"; şeklinde de isim verebiliyoruz.
+>> useState bize iki şey verir, biri state'in kendisi diğeri state değiştiğinde kullanılacak fonksiyon.
+    const [state, setState] = useState(); buradaki isimlendirme önemli..
+    örn. const [count, setCount] = useState();
+
+>> count'a default değer vermek için useState() içerisine yazmalıyız.
+    const [count, setCount] = useState(0);
+
+>> State'ler ki burada count eşitlenerek değiştirilmezler. Onun yerine setCount kullanılır.
+>> setState asenkron çalışır, setState içerisinde kendi state'i ile ilgili işlem yapılacaksa kesinlikle asenkron olmaktan 
+çıkması gerek.
+    
+    const decreaseCount = ()=>{
+        setCount((prevState)=>prevState-1);
+    }
+
+>> <HoverButton visible/> kullanımı visible degerinin true olarak gideceğini belirtir.
+
+## useEffect
+>> Sayfa yüklendiğinde kullanılır
+>> useEffect bir prop'da veya state'de değişiklik varsa güncelliyorsak ve bu güncellemeyi takip ediyosak kullanıyoruz.
+
+import { useEffect, useState } from "react";
+
+useEffect(() => {}, [])
+Component yüklendikten sonra callback function çalışır.
+Boş array gönderildiğinde sayfa yüklendiğinde useEffect çalışır.
+
+// Sayfalar arası geçiş.
+npm install react-router-dom 
+
+
+>> path="/" localhost:3000 iken demek. exact default page'i belirtiyor.
+<Route path="/" element={<ProductsPage />} exact/> 

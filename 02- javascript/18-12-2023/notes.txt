@@ -1,0 +1,34 @@
+>> Değişken const olarak tanımlanırsa sadece değeri değişebilir, referansı değişemez demektir.
+
+Spread operatörü referansı değil, değeri taşır.
+** Rest parametredir, spread(...) ise operatörün kendisidir.
+
+Senkron programlama; birbirinin bitmesini bekleyen programlama.
+Asenkron programlama; birbirinin bitmesini beklemeyen programlama.
+
+Cpu cycle; belli bir işin(thread) gerçekleşmesi için gereken zaman.
+
+Single thread; aynı anda bir iş yapabilir.
+Multi thread; aynı anda birden fazla iş yapabilir.
+
+url
+---
+subdomain.siteadi.extension/subfolder
+
+>> Javascript üzerinden atılan istekler network tabında, fetch/xhr kısıtını uygulayınca gözüküyor.
+>> Aynı zamanda bu tabda atılan isteğe tıklayınca sağda preview dersen formatlanmış görürsün, response dersen
+normal görürsün.
+
+>> Promise, genelde asenkron çalışan yapıların işleyişlerini kontrol edebildiğimiz bir tip. Örneğin, fetch promise olarak bir
+tiptir.
+
+>> Promise bize resolve ve reject functionlarını sağlar.
+>> resolve işlemin gerçekleştiği durumda, reject işlemin gerçekleşmediği durumda yazılır.
+>> resolve'den gelen sonucu yakalamak için then kullanırız ve istediğimiz kadar then kullanabiliiriz.
+>> resolve içerisinden ne gönderirsek then içerisinden onu yakalayabiliriz.
+
+>> reject'den gelen sonucu yakalamak için catch kullanırız ama catch'i bir kere kullanabiliriz.
+
+>> resolve içerisinde iki tane mesaj veya sonuç dönmek istiyorsak obje olarak göndermemiz gerekiyor.
+
+>> Promise yapılarında then, catch yanında async - await kavramları gelmiştir.

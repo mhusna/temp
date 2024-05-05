@@ -1,0 +1,6 @@
+Local Storage ve Session Storage
+=> Local storage'de tutulan bilgiler silinmediği müddetçe tutulmaya devam ederler.
+=> Session storage'de sekme kapatıldığında silinir.
+
+>> Localstorage ve sessionstorage'de metotlar aynı şekilde çalışırlar.
+getItem, setItem, removeItem, clear.

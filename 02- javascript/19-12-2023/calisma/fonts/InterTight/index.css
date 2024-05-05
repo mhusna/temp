@@ -1,0 +1,17 @@
+@font-face{
+    font-family: "Inter Tight";
+    src:url("InterTight-Regular.ttf"),local("InterTight-Regular");
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: "Inter Tight";
+    src:url("InterTight-SemiBold.ttf"),local("InterTight-SemiBold");
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: "Inter Tight";
+    src:url("InterTight-Black.ttf"),local("InterTight-Black");
+    font-weight: 900;
+}

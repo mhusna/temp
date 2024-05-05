@@ -1,0 +1,34 @@
+JavaScript Naming Convention
+
+## Variable -> camelCase
+==> navbar, space-between
+
+## Function -> camelCase
+## Constant(Primitive) -> UPPER_SNAKE_CASE
+## Constant(Reference) -> camelCase
+## Class -> PascalCase
+## Component -> PascalCase
+
+C#'daki metotlar, javascriptte function'dur. 
+Javascriptteki metotlar ise bir class içerisinde oluşturulmuş functionlardır.
+
+Head'e eklersen body içinde bulunan dom elementleri ile alakalı herhangi bir manipülasyon yapmayacaksak eklenir.
+Body'e eklersen, elementler yüklendikten sonra javascript yüklenir dolayısıyla manipülasyon yapabilirsin demek.
+
+Kodda debug yapmak için tarayıcıda source sekmesinden javascript dosyasını açıp istediğin satıra tıklıyosun sonra f5'le yenileyince
+debug modda açıyor.
+
+=> Bir component'in kesinlikle bir dönüş tipi olması gerekir.
+
+/** ile detaylı bilgi verebilirsin
+
+
+Var - Let Farkı
+=> Var global variable, let scoped variable.
+=> Const da let gibi çalışır.
+
+Hoisting, variable ve function isimlerini alıyor, daha sonra program çalışır.
+
+Statement vs Expression
+=> Bir değeri yok. Birşeyin yapılmasını sağlar. (for, if)
+=> Expression'ların bir değeri var, değerleri değiştirilebilir. (class, object, var)

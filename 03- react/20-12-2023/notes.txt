@@ -1,0 +1,72 @@
+>> json server sanal bir db oluşturmayı sağlar. Veriye ihtiyacımız olduğunda json-server kullanabiliriz.
+>> json server ayağa kaldırmak için json dosyasinin bulundugu dizinde; 
+	npx json-server --watch jsonDosyaAdı --port herhangiBirPort
+   	örn. npx json-server --watch db.json --port 4000
+
+>> post işleminde json'a id vermezsek otomatik olarak kendisi arttırır.
+
+>> json server'da; 
+                    => q ile ararsan tüm verinin içerisinde arar. 
+                        örn. url?q=est
+
+                    => _sort ile hangi kolona göre sıralama yapmak istediğimizi söylüyoruz.
+                        örn. _sort=body
+                    
+                    => _order ile asc (default), desc gibi seçeneklerle sıralayabiliriz.
+                        örn. _order=desc
+
+React
+>> Herşey bir component'tır. Elementler atomik veya moleküler olarak ikiye ayrılır.
+    örn. Buton bir atomik component'tir, navbar moleküler component'tir.
+>> React'ta parametre değil prop vardır.
+
+>> react projesi oluşturmak için; npx create-react-app projeAdi
+>> Çalıştırmak için;
+    npm run scriptAdi
+komutları çalıştırılır. Eğer start scriptini kullanacaksan direk npm start dersen yeterli.
+>> Normalde bir react projesini indirdiğimizde önce npm install veya npm i dememiz gerek çünkü projenin bağımlı olduğu
+kütüphaneler otomatik olarak yüklü gelmez. Bunu sağlayan .gitignore dosyası. 
+>> Örneğin node_modules dosyası gönderilmez çünkü boşu boşuna 200-300mb upload yapmak istemeyiz.
+>> React default olarak client-side çalışır. Client-side olduğunda sayfanın çalıştırılması client'ta gerçekleşir.
+Client-side'ın google tarafından indexlenmesi yavaştır çünkü html'in içerisi boş ve google'ın html'den anlayabileceği birşey
+yok.
+>> React'ın server-side olarak çalışmasını sağlayan next.js gibi frameworkler de var. Client hangi sayfayı isterse server onu oluşturur ve
+client'a sadece onu gönderir.
+
+>> package.json; projenin nasıl çalışacağını, bağımlılıkların ne olduğunu bildirir.
+>> Bütün bağımlılıklar package.json içerisinde bildirilmeli.
+>> Bağımlılık bildirirken örn. "react": "^18.2.0" şapka işareti paketleri yüklerken daha üst bir versiyon varsa sen de yükle 
+demek ama normal yazarsak örn. "react-scripts": "5.0.1" sadece o sürümü yükle demek. 
+
+>> index.js içerisindeki <React.StrictMode> </React.StrictMode> etiketlerini siliyoruz çünkü bu componentları iki kere oluştur-
+mayı sağlıyor, buna gerek yok.
+>> App.js dosyasında return etmek zorundayız. function App() bir component'dır.
+>> Javascriptte bir function'a dışarıdan erişmek için export etmemiz gerekir. Export iki şekilde yapılabilir. 
+    Biri default export'dur. örn. export default App;
+    Diğeri normal export'dur. örn. export{App1, App2}
+Ve bunlar import edildikleri yerlerde farklı şekillerde import edilirler.
+
+>> React component altında okuyacağı ilk dosya index.js - index.jsx gibi dosyalardır.
+>> import Paragraph from "./components/Paragraph"; dosya ismi paragraph diye import'tan sonra gelen ifade de Paragraph olmak
+zorunda değildir. Oradaki takma isimdir, istediğini verebilirsin.
+
+>> prop'lar parametre içerisinde object olarak geliyolar.
+>> Back-link'ler index.js içerisinde süslü parantez içerisinde kullanılmalılar.
+>> `anchor ${className || ""}` className yoksa boş gelicek varsa kendisi gelicek.
+
+## Classnames
+>> npm install classnames ile component'lara vericeğimiz class isimlerini yönetebiliyoruz.
+>> import classname from "classnames"; komutu ile import ediyoruz.
+
+>> { count > 0 && <span className="notificationButton-count">{count}</span>} 
+
+    NotificationButton > index.js içerisinde;
+        count varsa ve 0'dan büyükse span'i oluşturacak.
+
+>> Scss kullanmak icin npm install sass yapmak gerek.
+
+REACT KURALLARI
+>> package.json neredeyse npm start komutu orada çalıştırılmalı.
+>> React'ta component'ların ismi PascalCase olmak zorundadır.
+>> Kütüphane import'ları en üstte, component importları ortada, css - image importları en altta.
+>> React'ta class tanımlayacaksak className demek zorundayız.
